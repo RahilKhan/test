@@ -1,0 +1,33 @@
+#1. It took almost 4.5 hours to finish the task.
+    1. Application of JUnit took almost 1 hrs as it required, revisiting the concept of JUnit and its inmplementation.
+    2. Addition of new currency is done through csv input. As it seems to be convenient way to add new currency rather than
+     going by the command line approach. User can provide csv file at the runtime. 
+     
+#2. Following steps have been completed:-
+
+	1. JUnit test cases are added for positive and negative scenarios for public methods.
+	
+	2. Javadoc comments added to methods
+	
+	3. Currency equality check was done on base of numericCode which should be unique.
+	   In the program HKD and MYR have same numericCode as such equality check was failing.
+	   Updated the numericCode for MYR to 458
+	   Additionally, updated equal check for currency and added check on currencySymbolOverride as well.
+	
+	4. New currency details can be added via csv file.
+	   At the runtime program ask users to user to provide path to the csv file of currency.
+	   Sample csv file is provided in the application. SampleCurrencyCsvFile.csv
+	   
+	5. Currency class is refactored and divided into 2 classes:-
+	   Currency.java : Bean class containing variable and getter/setter methods.
+	   Currency.java : Service class which contains methods related to currency.   
+	   This strategy is useful as it segregates the bean and service methods which results in increased readability and code maintenance.	
+	   Addition of new functionality will have impact on CurrencyService.java class only and not on Curreny.java bean class. 
+	   
+	   Additionally CSVReader.java class is added for csv read.
+       JUnit test cases have been written for csv reader functions also.
+
+#3.  3rd party software/lib:-
+     JUnit lib are added as they are required for implementing junit testcases.
+     Though Maven framework could be included, but was not included due to time constraint. 
+
